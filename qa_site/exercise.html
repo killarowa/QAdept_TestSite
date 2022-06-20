@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+		<html>
+			<head>
+				<title>QA Department</title>
+				<meta charset="UTF-8">
+				<link rel="stylesheet" href="style.css">
+			</head> 
+
+			<body>
+			<nav>
+				<div class="wrapper">
+					<ul>
+						<li><a href="index.html">Начало</a> </li> 
+			  			<li><a href="portfolio.html">Тестване</a> </li>
+			  			<li><a href="about.html">Отдел</a> </li>
+			  			<li><a href="contact.html">Контакти</a> </li>
+			  			<li><a href="automation.html">Автоматизация</a> </li>
+			  			<li><a href="exercise.html">Упражнения</a> </li>
+						<div class="logo"><a href="#"><img src ="img/ctGaming.png"</a> 
+			  		</ul>
+				</div>
+		    </nav>
+
+		    <style>
+				#tasks {
+					background-color: black;
+					width: 49.5%;
+					float: left;
+					border-radius: 25px;
+					color: grey;
+					margin-top: 20px;
+					text-align: center;
+					height: 2500px;
+				}
+				#examples{
+					background-color: black;
+					width: 49.5%;
+					float: right;
+					border-radius: 25px;
+					color: blue; 
+					margin-top: 20px;
+					text-align: center;
+					height: 2500px;
+				}
+			</style>
+
+			<div id="tasks">
+				<h2><p>Задачи:</p></h2>
+				
+			  	<h4>Задача 1:</h4>
+		    	<h4>Избери опция от менюто:<br></h4>
+		    	
+				<div class= "TestField">
+		    		<select name="select" id="format">
+		    			<option selected disabled></option>
+		    			<option value="opt-1">Ford</option>
+		    			<option value="opt-2">Mercedes-Benz</option>
+		    			<option value="opt-3">BMW</option>
+		    			<option value="opt-4">Opel</option>
+		    			<option value="opt-5">Fiat</option>
+		    			<option value="opt-6">Mazda</option>
+		    			<option value="opt-7">Honda</option>
+		    			<option value="opt-8">Audi</option>
+		    			<option value="opt-9">Saab</option>
+		    			<option value="opt-10">Skoda</option>
+		    		</select>
+		    	</div>
+		    	<br></br>
+		    	<br></br>
+
+					<h4>Задача 2:</h4>
+		    		<h4>Копирай опцията от Задача 1 и я постави в полето:</h4>
+		    			<input type="text" name="text-input" id="text-input"></input>
+		    	<br></br>
+		    	<br></br>	
+
+		    		<h4>Задача 3:</h4>
+		    		<h4>Натисни бутона:</h4>
+		    			<button onclick="alert('Метод .click(); е изпълнен успешно!')" >Click();</button>
+		    	<br></br>
+		    	<br></br>
+
+		    		<h4>Задача 4:</h4>
+		    		<h4>Копирай текста от алерта и го изпринти в конзолата:</h4>
+		    	<br></br>
+		    	<br></br>
+
+					<h4>Задача 5:</h4>
+		    		<h4>Затвори алерта от задача 3:</h4>
+		    	<br></br>
+		    	<br></br>	
+		    		
+					<h4>Задача 6:</h4>
+		    		<h4>Впиши текста, копиран от задача 3 в полето, изчакай 3 секунди,<br>
+		    		    изтрий съдържанието на полето:</h4>
+		    			<input type="text" name="text-input" id="text-input"></input>
+		    	<br></br>
+		    	<br></br>	
+
+					<h4>Задача 7:</h4>
+		    		<h4>Направи рефреш/релоуд на браузъра</h4>
+		    	<br></br>
+		    	<br></br>	
+
+		    		<h4>Задача 8:</h4>
+		    		<h4>Затвори браузъра</h4>
+		    	<br></br>
+		    	
+		    	<p>
+
+			</div>
+
+
+			<div id="examples">
+				<h2><p>Примери:</p></h2>
+
+
+				<h4>Пример 1:</h4>
+		    		WebElement element = driver.findElement(By.name(name));<br>
+		    		Select select = new Select(element);<br>
+		    		select.selectByIndex(index);<br>
+		    		<br></br>
+		    		<br></br>
+		    		
+				<h4>Пример 2:</h4>
+		   	    	driver.findElement(By.id(id)).getText();<br>
+					driver.findElement(By.id(id)).sendKeys();<br>
+		   	    	<br></br>
+		    		<br></br>
+				
+				<h4>Пример 3:</h4>
+					driver.findelement(By.id("id")).click();<br>
+					driver.findelement(By.id("id")).submit();<br>
+					<br>
+					<br></br>
+		    		<br></br>
+
+				<h4>Пример 4:</h4>
+					String alertMessage = driver.switchTo().alert().getText();<br>
+					System.out.println(alertMessage);<br>
+					<br></br>
+		    		<br></br>
+				
+				<h4>Пример 5:</h4>
+					driver.switchTo().alert().dismiss();<br>
+					<br></br>
+		    		<br></br>
+
+		    	<br></br>
+		    	<h4>Пример 6:</h4>
+					driver.findElement(By.id(id)).sendKeys();<br>
+					thread.sleep(3000);<br>
+					driver.findElement(By.id(id)).clear;<br>
+					<br></br>
+		    		<br></br>	
+
+		    	<h4>Пример 7:</h4>
+					driver.navigate().refresh();<br>
+					driver.navigate().reload();
+					<br></br>
+		    		<br></br>		
+				
+				<h4>Пример 8:</h4>
+					driver.close();<br>
+					driver.quit();
+					<br></br>
+		    		<br></br>
+		    		<p>
+			</div>
+
+		   
+		    

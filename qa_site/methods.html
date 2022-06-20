@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+		<html>
+			<head>
+				<title>QA Department</title>
+				<meta charset="UTF-8">
+				<link rel="stylesheet" href="style.css">
+			</head> 
+
+			<body>
+				
+			<nav>
+				<div class="wrapper">
+					<ul>
+						<li><a href="index.html">Начало</a> </li> 
+			  			<li><a href="portfolio.html">Тестване</a> </li>
+			  			<li><a href="about.html">Отдел</a> </li>
+			  			<li><a href="contact.html">Контакти</a> </li>
+			  			<li><a href="automation.html">Автоматизация</a> </li>
+			  			<li><a href="exercise.html">Упражнения</a> </li>
+			  			<div class="logo"><a href="#"><img src ="img/ctGaming.png"</a> 
+			  		</ul>
+				</div>
+		    </nav>
+
+		    <div class= methods>
+		    	<p><a>Методи за работа в Selenium:</a>
+
+		    	<a><h3> I. Основни методи:<br></h3>
+		    		<a>1. get();</a><br> 
+		    		<a>2. getText();</a><br>
+		    		<a>3. click();</a><br> 
+		    		<a>4. submit();</a><br> 
+		    		<a>5. sendKeys();</a><br> 
+		    		<a>6. clear();</a><br> 
+		    		<a>7. quit();</a><br> 
+		    		<a>8. Select();</a><br>
+		    		<a>9. Try Catch</a><br>
+		    		<a>10. Action class</a><br>
+		    		<a>11. Hover</a><br>
+		    		<a>12. Drag and Drop</a><br>
+		    	</p>
+		    	<br>
+		    	<p><a>Примери:</a></p><br>
+		    		<a>1. get(); - методът се използва за извикване на определен сайт:</a><br> 
+					Пример:	<br>	    		
+					driver.get("https://www.youtube.com");. Изписана по този начин, командата ще</a><br>
+		    		извика сайт www.youtube.com, като ще впише адреса на сайта в адрес бара на браузъра,</a><br>
+		    		който автоматично ще го достъпи.<br>
+				</br>
+		    		<a>2. getText(); - използва се при сличаи, в които е нужно да се копира даден</a><br>
+		    		текс от интердейса и да се изпринти в конзолата на компилатора.<br> 
+		    		Подходящ е за сравнения на текст. <br>
+		    		Пример:<br> 
+		    		Ако в края на теста бива показано писмено съобщение за успех на извършената операция,<br>
+		    		то от този текст може да се създаде стринг, който е еднакъв със съобщението от екрана:<br>
+		    		String 'text1' = driver.findElement(By.id("id")).getText();<br>
+		    		String 'text2' = "Operation Successful";<br>
+		    		Така променливата 'text1' ще копира написаното в интерфейса и ще го съхрани.<br>
+		    		Проверката за еднаквост между създадения стринг и онзи, който е изписан в интерфейса,<br>
+		    		се изпълнява по следния начин:<br>
+		    		if(text1.equalsIgnoreCase(text2)){<br>
+		    			System.out.println("Test passed!");<br>
+		    		}<br>
+		    		else{<br>
+		    			System.out.println("Test failed");<br>
+		    		}<br>
+		    	</br>
+		    		<a>3. click(); - методът е подходящ за манипулиране на бутони от всякакъв вид, може да бъде заместен с друг<br>
+		    		сходен по действие такъв (например: .submit();).<br>	
+		    		Пример:<br>
+		    		driver.findElement(By.id(id)).click();<br>
+		    	</br>
+		    		<a>4. submit(); - използва се при бутони от тип 'submit'. Действието му е сходно с това на метод click();<br>
+ 					Пример:<br>
+ 					driver.findElement(By.id(id)).submit();<br>
+		    	</br>
+		    		<a>5. sendKeys(); - методът се използва главно за вписване на стринг в 'input' поле.<br>
+ 					Пример:<br>
+ 					driver.findElement(By.id(id)).sendKeys("text");<br>
+ 					Подходящ е още за имитиране на команди от клавиатура, като:<br>
+ 					.sendKeys(Keys.DELETE);- ще извърши действие като метод .clear();<br>
+ 				</br>
+ 					<a>6. clear(); - този метод ще изпълни премахване на даден стринг от 'input' поле.<br>
+ 					Подходящ е за изтриване на полетa, които съдържат дата (филтри за период, дата или полета със съхранен<br>
+ 					стринг).<br>	
+ 					Пример:<br>	
+ 					driver.findElement(By.id(id)).clear();<br>
+ 				</br>
+ 					<a>7. quit(); - методът ще затвори браузъра след края на теста.<br>
+ 					Пример:<br>
+ 					driver.quit();<br>
+ 				</br>
+ 					<a>8. Select(); - методът се използва при селект полета, в които се съдържат различни опции.<br>
+ 					Пример:<br>
+ 					Select select = new Select();<br>
+ 					select.selectByIndex(index);<br>
+ 				</br>	
+ 					<a>9. Try Catch:<br>
+ 					Пример:<br>
+ 					public class Demo {<br>
+  						public static void main(String[ ] args) {<br>
+    						try {<br>
+      							driver.findElement(By.xpath(xpath)).click();<br>
+      						} catch (Exception e) {<br>
+      							System.out.println("Something went wrong.");<br>
+    						}<br>
+  						}<br>
+					}<br>
+ 				</br>
+ 					<a>10. Actions class- Класът Actions е способност, предоставена от Selenium за обработка<br>
+ 					 на събития с клавиатура и мишка. Класът е подходящ е за операции като Check card в интерфейс Cashdesk.<br>
+ 					 Пример:<br>
+ 					 Actions action = new Actions(driver);<br>
+					 action.moveToElement(element).click().perform();<br>
+ 				</br>
+ 					11. Hover- част от клас Actions, подходящ за зависване над даден обект или елемент от интерфейса.<br>
+ 					Приложим е за интерфейси, в които има икони, в които се съдържат бутони, а те се визуализират <br>
+ 					след зависяване с курсора. Такива са бутоните за стартиране на игра в 'Play' или 'Demo' режим<br>
+ 					в сайт PalmsBet.<br>
+ 					Пример:<br>
+ 					WebElement funBtn = driver.findElement(By.id("fun-button"));<br>
+					Actions action = new Actions(driver);<br>
+					action.moveToElement(funBtn).perform();<br>
+				</br>
+					<a>12. Drag and Drop- това действие се извършва с помощта на мишката, когато потребителят премести<br>
+					 уеб елемент от една точка и го постави в друга точка на интерфейса.<br>
+					 При автоматизиране на това действие в web апликация e нужнo да се изпълни следното: <br>
+					 1. Обект, който ще бъде преместван- SourceLocator.<br>
+					 2. Обект или поле, в който/което ще бъде поставен SourceLocator- DestinationLocator.<br>
+					 Пример:<br>
+					 Actions action = new Actions(driver);<br>
+					 action.dragAndDrop(SourceLocator, DestinationLocator).build().perform();<br>
+				</br>	 
+
+
+
+            </div>

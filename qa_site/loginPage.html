@@ -1,0 +1,105 @@
+https://www.youtube.com/watch?v=WYufSGgaCZ8
+
+
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>QA Department</title>
+			<meta charset="UTF-8">
+			<link rel="stylesheet" href="style.css">
+		</head> 
+
+		<style>
+			body{
+				background-size: cover;
+				background-position: center;
+				background-image: url(img/loginPage3.png);
+			}
+			.login-page{
+				width: 360px;
+				padding: 10% 0 0;
+				margin: auto;
+			}
+			.form{
+				position: relative;
+				z-index: 1;
+				background: rgba(7, 40, 195, 0.8);
+				max-width: 360px;
+				margin: 0 auto 100px;
+				padding: 45px;
+				text-align: center;
+				border-radius: 25px;
+			}
+			.form input{
+				font-family: "Candara", sans-serif;
+				outline: 1;
+				background: grey;
+				width: 100%;
+				border: 0;
+				margin: 0 0 15px;
+				padding: 15px;
+				box-sizing: 14px; 
+			}
+			.form button{
+				font-family: "Candara", sans-serif;
+				text-transform: uppercase;
+				outline: 0;
+				background: green;
+				width: 100%;
+				border-radius: 0;
+				padding: 15px;
+				color: #FFFFFF;
+				font-size: 14px;
+				cursor: pointer;
+			}
+			.form button:hover,.form button:active{
+ 				background: #43A047;
+ 			}
+ 			.form .message{
+ 				margin: 15px 0 0;
+ 				color: aliceblue;
+ 				font-size: 20px;
+ 			}
+ 			.form .message a{
+ 				color: #4ACF;
+ 				text-decoration: none;
+ 			}
+ 			.form .register-form{
+ 				display: none;
+ 			}
+ 			
+		</style>
+
+		<body>
+			<div class="login-page">
+				<div class="form">
+					<form class="register-form">
+						<input type="text" placeholder="username"/>
+						<input type="text" placeholder="password"/>
+						<input type="text" placeholder="email ID"/>
+						<button>Create</button>	
+						<p class="message">Already Registered? <a href="#">Login</a>
+						</p>
+					</form>
+
+					<form class="login-form">
+					<input type="text" placeholder="user name"/>
+					<input type="password" placeholder="password"/>
+					<button>login</button>
+					<p class="message">Not Registered? <a href="#">Register now!</a></p>
+					</form>
+
+				</div>	
+			</div>
+
+				<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+
+				<script>
+					$('.message a').click(function(){
+					$('form').animate({height:"toggle", opacity:"toggle"}, "slow");
+					});
+					
+
+				</script>
+
+		</body>
