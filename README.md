@@ -1,6 +1,7 @@
 # QAdept_TestSite
 
-Does not contain QA Department lead and employees.
-Does not contain QA Department lead and employees images.
-Does not contain QA Department lead and employees HTML files.
-Contains stript skeleton only!
+DOES NOT CONTAIN:
+1. Employees private information
+2. Employees images.
+3. 
+Contains site project skeleton only!
